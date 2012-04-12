@@ -1,18 +1,18 @@
 {
-	"name":"discord-example",
-	"description":"An example world running on the Discord MMO engine.",
-	"version":"0.4.0",
+	"name":"hackthefuture-mud",
+	"description":"a MUD for future hackers to hack on at Hack the Future",
+	"version":"0.1.0",
 	"repository": {
 		"type": "git",
-		"url": "http://github.com/yuffster/discord-example"
+		"url": "https://github.com/epall/hackthefuture-mud"
 	},
 	"dependencies": {
-		"discord":">=0.5.0",
-		"discord-web":">=0.5.0"
+		"discord":">=0.6.4",
+		"discord-web":">=0.7.1"
 	},
 	"author": {
-		"name": "Michelle Steigerwalt",
-		"homepage": "http://msteigerwalt.com"
+		"name": "Eric Allen",
+		"homepage": "http://hackerengineer.net"
 	},
 	"main": "start_server.js"
 }
