@@ -7,7 +7,7 @@
 		"url": "https://github.com/epall/hackthefuture-mud"
 	},
 	"dependencies": {
-		"discord":">=0.6.4",
+		"discord":">=0.7.1",
 		"discord-web":">=0.7.1"
 	},
 	"author": {
