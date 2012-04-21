@@ -5,10 +5,10 @@ module.exports =  new Class({
 	execute: function(stuff) {
     var result;
     try {
-      result = huggle(stuff);
+      result = eval(stuff);
       this.emit("Result: "+result, this);
     } catch (e) {
-      this.emit("the lab rat dies"+e.toString(), this);
+      this.emit("Dude, your thing broke: "+e.toString(), this);
     }
 		return true;
 	}

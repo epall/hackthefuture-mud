@@ -18,7 +18,7 @@ module.exports =  new Class({
 
   do_plug: function(user, str) {
     if (str.match(/^cable/)) {
-      this.emit("You plug the cable into the socket.");
+      this.emit("The socket exploded");
       if (user.world.rooms['elevator']) {
         user.world.rooms['elevator'].set_cable_plugged_in(true);
       }

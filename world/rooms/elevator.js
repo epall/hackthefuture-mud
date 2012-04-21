@@ -45,7 +45,7 @@ module.exports =  new Class({
     } else if (parseInt(str) < 1 || parseInt(str) > 14) {
       this.emit("The numbers only go from 1 to 14.");
     } else {
-      this.emit("You press the "+str+" button. The lights flicker, but the elevator doesn't move.");
+      this.emit("You press the "+str+" button. The lights flicker, but the elevator does move.");
     }
 	},
 
