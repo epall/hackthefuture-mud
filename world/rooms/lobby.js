@@ -9,12 +9,12 @@ module.exports =  new Class({
 		    "A spare test tube lies on the ground, capped and ready for use. " +
 		    "The test tube can be used to make an explosion, maybe?"
 		);
-		this.add_living('black cat');
+		//this.add_living('black cat');
 
 
-		this.load_item('test tube');
-		this.add_exit('east', 'testroom');
-    
+		//this.load_item('test tube');
+    this.add_exit('north', 'elevator');
+        //this.add_exit('south', 'lab');
 	}
 
 });
