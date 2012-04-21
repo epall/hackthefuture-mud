@@ -32,6 +32,7 @@ module.exports =  new Class({
 		this.add_exit('south', 'lobby');
 		this.add_exit('west', 'secret clubroom');
         this.add_exit('trapdoor', 'Labrinthia_a');
+        this.add_exit('ladder', 'foggy_courtyard');
 
 	},
 	

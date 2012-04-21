@@ -14,9 +14,9 @@ module.exports =  new Class({
 		);
 
 		this.add_alias('rat');
-		this.stats.strength = 1;
-		this.stats.hp =5;
-		this.stats.speed= 1;
+		this.stats.strength = 2;
+		this.stats.hp =50;
+		this.stats.speed=2;
 		this.add_command('taunt','lab rat')
 		
 

@@ -23,11 +23,16 @@ module.exports = new Class({
 	do_ban: function(target, actor) {
     
     if (!target) return "Talk to whom about what?";
-
-
+    
 		actor.emit("%You ban%s ", target);
-        actor.emit("%YOU HAVE BEEN PUNISHED!");
-        target.location = 'Labrinthia_a'
+    target = actor.room.players[target];
+        target.emit("%YOU HAVE BEEN PUNISHED!");
+        try {
+          target.moveTo(target.world.rooms['Labrinthia_a']);  
+        } catch (e) {
+          actor.emit(e.toString());
+        }
+        return "done did it";
 	}
 
 });

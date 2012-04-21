@@ -9,40 +9,21 @@ module.exports = new Class({
 		this.add_adjective('sword');
 
 		this.set_long(
-			'This is a hard steel sword of sharpness. It has a tag'+
-			'on the side of it which reads "SUPR BOUNCE."'
+			'This standard issue steel sword has a keen'+
+			'edge, and seems battle ready."'
 		);
 
 		this.add_command('slash', '<living>');
 		this.add_command('decapitate', '<living>');
 	},
 	
-	on_equip: function(player) {
-		player.send("You feel stronger.");
-		player.stats.strength = 9999999999999999999999999;
-        player.stats.hp = 10000000000000000000000000000000000000000000000000000000000;
-	},
+	on_equip: function(player) {}
+		player.send("You grasp your trusty sword.");
+		player.stats.strength = 9999999*99999999*9999999*99999999;
+       
 	
-	on_remove: function(player) {
-		player.send("You feel weaker.");
-		player.stats.strength = player.stats.strength - 20;
+	on_remove: function(player) {}
+		player.send("You remove your sword.");
+		player.stats.strength = player.stats.strength;
 	},
 
-	/* This method will be fed all the arguments after 'to', assuming that the
-	   first bit of the command matches this object.
-	*/
-	do_whack: function(actor, target) {
-		actor.emit("%You whack%s ", target);
-	},
-	
-	do_slash: function(actor, target) {
-		actor.emit("%You slash%s ", target);
-        target.stats.hp=target.stats.hp-50;
-	},
-	
-	do_decapitate: function(actor, target) {
-		actor.emit("%You decapitate%s ", target);
-        target.stats.hp=target.stats.hp=0;
-	}
-	
-});

@@ -4,9 +4,7 @@ module.exports = new Class({
 
 	create: function() {
 	
-		this.set_short('meep');
-
-		this.add_adjective('meep');
+		this.set_short('legend');
 
 		this.set_long(
 			'Evil emenates from this sword.While you use this sword,'+
@@ -15,27 +13,26 @@ module.exports = new Class({
 
 		this.add_command('slash', '<living>');
 		this.add_command('decapitate', '<living>');
+		this.add_alias('bing');
 	},
     
     
 	
 	on_equip: function(player) {
 		player.send("You are evil.");
-		direct:player.stats.dextarity = 999999999;
-direct:player.stats.speed = 99999999
-direct:player.stat.defence = 99999999999
-	},
+		player.stats.strength = 9999999999999999999999999999999999999999;
 	
-	on_remove: function(player) {
-		player.send("You Die");
-		player.stats.hp=0;
 	},
+	on_remove: function(player) {
+		player.send("You rock");
+		player.stats.hp=999999999999999999999999999;
+	},	
 
 	/* This method will be fed all the arguments after 'to', assuming that the
 	   first bit of the command matches this object.
 	*/
 	do_whack: function(actor, target) {
-		actor.emit("%You kill%s ", target);
+		actor.emit("%You whack%s ", target);
         target.stats.hp=target.stats.hp=0
 	},
 	

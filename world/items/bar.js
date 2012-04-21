@@ -4,7 +4,7 @@ module.exports = new Class({
 
 	create: function() {
 	
-		this.set_short('strawberry');
+		this.set_short('bar');
 
 		this.add_adjective('berry');
 
@@ -27,4 +27,3 @@ module.exports = new Class({
 	}
 
 });
-
