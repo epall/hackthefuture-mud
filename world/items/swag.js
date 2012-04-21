@@ -4,10 +4,10 @@ module.exports = new Class({
 
 	create: function(actor,item) {
     
-        if (this.room != 'a secret clubroom')
-        {
-            actor.removeItem(item);
-        }
+        //if (this.room != 'a secret clubroom')
+        //{
+        //    actor.removeItem(item);
+        //}
 	
 		this.set_short('swag');
 

@@ -6,6 +6,8 @@ module.exports =  new Class({
 	
 	create: function() {
 
+		this.stats.strength = 1000;
+		
 		this.set_short('happy cow');
 
 		this.set_long(
@@ -36,6 +38,8 @@ module.exports =  new Class({
 		if (this.enemies.contains(player.get('name'))) {
 			this.emit("%You stomp%s %your hooves angrily and charg%es towards %Name!", player);
 			this.force('kill '+player.get('name'));
+			player.force('kill '+this.get('short'));
+			this.set_short('angry cow');
 		} else {
 			this.emit("%You moo%s angrily at %Name.", player);
 			this.enemies.push(player.get('name'));

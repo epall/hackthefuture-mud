@@ -14,8 +14,8 @@ module.exports =  new Class({
 
 		//this.load_item('test tube');
     	this.add_exit('north', 'elevator');
-        this.add_exit('south', 'boom');
-	this.add_exit('up', 'holding cells');
+        this.add_exit('south','boom';
+	this.add_exit('up', 'holdingcells');
 	}
 
 });
