@@ -30,6 +30,8 @@ module.exports =  new Class({
 		);
 		this.add_command('press', '*');
 		this.add_exit('south', 'lobby');
+        this.add_exit('sideways', 'closet');
+
 	},
 	
 	do_press: function (user, str) {
