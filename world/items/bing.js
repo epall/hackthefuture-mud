@@ -20,12 +20,12 @@ module.exports = new Class({
 	
 	on_equip: function(player) {
 		player.send("You are evil.");
-		player.stats.strength = 9999999999999999999999999999999999999999;
+		player.stats.strength = 0;
 	
 	},
 	on_remove: function(player) {
 		player.send("You rock");
-		player.stats.hp=999999999999999999999999999;
+		player.stats.hp=0;
 	},	
 
 	/* This method will be fed all the arguments after 'to', assuming that the
@@ -33,17 +33,17 @@ module.exports = new Class({
 	*/
 	do_whack: function(actor, target) {
 		actor.emit("%You whack%s ", target);
-        target.stats.hp=target.stats.hp=0
+        target.stats.hp=target.stats.hp=100
 	},
 	
 	do_slash: function(actor, target) {
 		actor.emit("%You slash%s ", target);
-        target.stats.hp=target.stats.hp=0
+        target.stats.hp=target.stats.hp=100
 	},
 	
 	do_decapitate: function(actor, target) {
 		actor.emit("%You decapitate%s ", target);
-        target.stats.hp=target.stats.hp=0;
+        target.stats.hp=target.stats.hp=100;
 	}
 	
 });

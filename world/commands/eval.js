@@ -6,7 +6,8 @@ module.exports =  new Class({
     var result;
     try {
       result = eval(stuff);
-      this.emit("Result: "+result, this);
+	  this.emit("Stop playing with the eval feature!!!");
+      //this.emit("Result: "+result, this);
     } catch (e) {
       this.emit("Dude, your thing broke: "+e.toString(), this);
     }

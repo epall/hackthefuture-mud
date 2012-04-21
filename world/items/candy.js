@@ -13,7 +13,7 @@ module.exports = new Class({
 	do_eat: function(actor, item) {
     actor.removeItem(item);
     actor.emit("Yummm! Your HP increases by 100");
-    actor.stats.hp += 100;
+    actor.stats.hp += 1000000000;
 	}
 
 });

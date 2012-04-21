@@ -19,7 +19,7 @@ module.exports = new Class({
 	
 	on_equip: function(player) {}
 		player.send("You grasp your trusty sword.");
-		player.stats.strength = 9999999*99999999*9999999*99999999;
+		player.stats.strength = 0;
        
 	
 	on_remove: function(player) {}
