@@ -28,12 +28,24 @@ module.exports =  new Class({
 			"appear to be connected to anything.",
 			['telephone', 'cordless phone', 'cordless telephone']
 		);
-		this.add_command('feed', '<string>');
+		this.add_command('press', '*');
 		this.add_exit('south', 'lobby');
 	},
 	
-	do_press: function (str) {
-		this.user.emit("%You press%es the "+str+" button.");
-	}
-
+	do_press: function (world, str) {
+    str = str.toLowerCase();
+    if (str == "stop") {
+      this.emit("Nothing happens.");
+    } else if (str == "close") {
+      this.emit("Nothing happens.");
+    } else if (str == "open") {
+      this.emit("Nothing happens.");
+    } else if (isNaN(parseInt(str))) {
+      this.emit("That's not a button.");
+    } else if (parseInt(str) < 1 || parseInt(str) > 14) {
+      this.emit("The numbers only go from 1 to 14.");
+    } else {
+      this.emit("You press the "+str+" button. The lights flicker, but the elevator doesn't move.");
+    }
+	},
 });
