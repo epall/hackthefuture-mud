@@ -9,9 +9,9 @@ module.exports =  new Class({
 		    "the ground. There is fear through the air . .  . "
 		);
 
-    
+        this.add_living('minotaur');
 		this.add_exit('north', 'lobby');
-
+		this.add_exit('sideways', 'pokemanz_room');
         }
 
 });

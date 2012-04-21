@@ -11,9 +11,9 @@ module.exports =  new Class({
 		);
 		//this.add_living('black cat');
 		this.add_living('happy_cow');
-		this.add_living('minotaur');
 
 		//this.load_item('test tube');
+        this.add_item('The Legendary Sword of doom, death and destruction');
 		this.add_item('spoon');
     	this.add_exit('north', 'elevator');
         this.add_exit('south','boom');

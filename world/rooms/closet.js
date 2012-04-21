@@ -13,6 +13,7 @@ module.exports =  new Class({
 
 		this.add_exit('east', 'lobby');
 		this.add_exit('updownhaha', 'secret_clubhouse');
+        this.add_living('minotaur');
 
     this.add_command('plug', '*');
 	},

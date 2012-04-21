@@ -22,8 +22,7 @@ module.exports =  new Class({
 
 		if (item.matches('strawberry')) {
 			this.emit("It lunges at you for feeding it one of its brothers.");
-			this.target=source;
-			source.target=this;
+			this.startCombat(source);
 			return;
 		}
 

@@ -14,7 +14,7 @@ module.exports =  new Class({
 
 		this.load_item('strawberry');
 		this.add_exit('north', 'elevator');
-    this.add_exit('west', 'closet');
+		this.add_exit('down', 'closet');
 	}
 
 });

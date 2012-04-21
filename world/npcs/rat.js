@@ -14,12 +14,25 @@ module.exports =  new Class({
 		);
 
 		this.add_alias('rat');
+		this.stats.strength = 50;
+		this.stats.hp =500;
+		this.stats.speed= 15;
+		
 
 		this.load_chat(4, [
 			"emote squeaks quietly.",
 			"emote chews on a tiny piece of wood."
 		]);
-
+ on_beatHeart: function(){
+    
+        
+        var players = this.getRoom().getPlayers();
+        var unluckyPlayer = players.keys.getRandom();
+        
+        
+        
+        this.startCombat(players[unluckyPlayer]);
+		
 	},
 
 	on_get: function(item, source) {
