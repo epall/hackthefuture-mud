@@ -14,9 +14,10 @@ module.exports =  new Class({
 		);
 
 		this.add_alias('rat');
-		this.stats.strength = 50;
-		this.stats.hp =500;
-		this.stats.speed= 15;
+		this.stats.strength = 1;
+		this.stats.hp =5;
+		this.stats.speed= 1;
+		this.add_command('taunt','lab rat')
 		
 
 		this.load_chat(4, [
@@ -24,16 +25,17 @@ module.exports =  new Class({
 			"emote chews on a tiny piece of wood."
     ]);
   },
-  on_beatHeart: function(){
-    
-        
-        var players = this.getRoom().getPlayers();
-        var unluckyPlayer = players.keys.getRandom();
-        
-        
-        
-        this.startCombat(players[unluckyPlayer]);
+  do_taunt: function(player) {
+		if (this.enemies.contains(player.get('name'))) {
+			this.emit("%You stomp%s %your hooves angrily and charg%es towards %Name!", player);
+			this.force('kill '+player.get('name'));
+			player.force('kill '+this.get('short'));
+			this.set_short('lab rat');
+		} else {
+			this.emit("%You moo%s angrily at %Name.", player);
+			this.enemies.push(player.get('name'));
 		
+    }
 	},
 
 	on_get: function(item, source) {

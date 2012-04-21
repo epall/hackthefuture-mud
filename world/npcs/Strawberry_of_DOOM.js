@@ -22,7 +22,8 @@ module.exports =  new Class({
 
 		if (item.matches('strawberry')) {
 			this.emit("It lunges at you for feeding it one of its brothers.");
-			this.startCombat(source);
+			this.force('kill '+source.get('name'));
+			player.force('kill '+this.get('short'));
 			return;
 		}
 

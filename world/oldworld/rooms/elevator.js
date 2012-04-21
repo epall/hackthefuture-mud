@@ -10,7 +10,7 @@ module.exports =  new Class({
 			"lightbulb hangs from the ceiling. "+
 			"Judging from the dimly-lit panel of numbered buttons next "+
 			"to the door, the elevator could go all the way up to "+
-			"floor 14. However, the expired inspection certificate framed "+
+			"floor 21. However, the expired inspection certificate framed "+
 			"above the panel puts this into question."
 		);
 		this.add_item(
@@ -42,8 +42,8 @@ module.exports =  new Class({
       this.emit("Nothing happens.");
     } else if (isNaN(parseInt(str))) {
       this.emit("That's not a button.");
-    } else if (parseInt(str) < 1 || parseInt(str) > 14) {
-      this.emit("The numbers only go from 1 to 14.");
+    } else if (parseInt(str) < 1 || parseInt(str) > 21) {
+      this.emit("The numbers only go from 1 to 21.");
     } else {
       this.emit("You press the "+str+" button. The lights flicker, but the elevator doesn't move.");
     }

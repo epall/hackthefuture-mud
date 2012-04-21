@@ -19,11 +19,11 @@ module.exports =  new Class({
 	},
 
   do_plug: function(user, str) {
-    if (str.match(/^cable/)) {
+	str = str.toLowerCase();
+    if (parseInt(str) == 3) {
+      user.world.rooms['elevator'].set_cable_plugged_in(true);
       this.emit("You plug the cable into the socket.");
-      if (user.world.rooms['elevator']) {
-        user.world.rooms['elevator'].set_cable_plugged_in(true);
-      }
+	  this.emit("Head to the elevator.");
     }
   }
 });

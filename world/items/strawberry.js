@@ -23,7 +23,7 @@ module.exports = new Class({
 	do_feed: function(actor, item, target) {
 		actor.removeItem(item);
 		actor.emit("%You feed%s "+item.get('definite')+" to %Name.", target);
-    target.on_get(item, this);
+    target.on_get(item, actor);
 	}
 
 });

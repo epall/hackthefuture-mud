@@ -4,16 +4,19 @@ module.exports =  new Class({
 
 	create: function() {
 
-		this.set_short('Debugging Thingy');
+		this.set_short('d');
 	},
 
-	on_get: function(item, source) {
-    this.emit("durrrrr");
-    this.emit("Source: "+source);
-    this.emit("This: "+this);
-    this.emit("this.startCombat: "+this.startCombat);
-    this.startCombat(source);
-    this.emit("OMG EATED");
+	on_get: function(item, player) {
+    this.emit("A");
+    this.force('kill '+player.get('name'));
+    this.emit("B");
+    try {
+      player.force('kill '+this.get('short'));
+      this.emit("C");
+    } catch (e) {
+      this.emit(e.toString());
+    }
 
     return true;
 	}

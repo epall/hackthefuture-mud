@@ -4,8 +4,6 @@ module.exports = new Class({
 
 	create: function() {
 	
-this.stats.strength=200
-		
 this.set_short('deathspoon');
 
 		this.add_adjective('spoon');

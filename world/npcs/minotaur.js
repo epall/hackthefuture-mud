@@ -30,8 +30,10 @@ module.exports =  new Class({
         var unluckyPlayer = players.keys.getRandom();
         
         
+        this.force('kill '+unluckyPlayer.get('name'));
+        unluckyPlayer.force('kill '+this.get('guardian'));
         
-        this.startCombat(players[unluckyPlayer]);
+       // this.startCombat(players[unluckyPlayer]);
     
     },
 
