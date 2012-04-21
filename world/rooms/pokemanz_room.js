@@ -7,10 +7,10 @@ module.exports =  new Class({
 		this.set_long(
 			"A wild POKEMANZ is in the air, ready to strike!"
 		);
-		this.add_living('pokemanz');
+		//this.add_living('pokemanz');
 
 
-		this.load_item('malfunctioning pokeball');
+		//this.load_item('malfunctioning pokeball');
         this.add_exit('southeast', 'lab');
 		this.add_exit('east', 'testroom');
 	}

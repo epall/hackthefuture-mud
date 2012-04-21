@@ -12,7 +12,7 @@ module.exports =  new Class({
     );
 
 		this.add_exit('east', 'lobby');
-		this.add_living('strawberry of doom');
+		//this.add_living('strawberry of doom');
     this.add_command('plug', '*');
 	},
 
