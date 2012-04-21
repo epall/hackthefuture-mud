@@ -11,6 +11,7 @@ module.exports =  new Class({
 		);
 
 		this.load_item('swag');
+		//this.add_living('lab rat');
 		this.add_exit('south', 'closet');
 	}
 

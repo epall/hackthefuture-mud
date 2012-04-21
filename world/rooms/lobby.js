@@ -15,6 +15,7 @@ module.exports =  new Class({
 		//this.load_item('test tube');
         this.add_item('The Legendary Sword of doom, death and destruction');
 		this.add_item('spoon');
+        this.add_exit('teleport', 'terrarium')
     	this.add_exit('north', 'elevator');
         this.add_exit('south','boom');
 		this.add_exit('up', 'holdingcells');
@@ -22,3 +23,4 @@ module.exports =  new Class({
 	}
 
 });
+

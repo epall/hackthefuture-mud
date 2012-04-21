@@ -4,44 +4,45 @@ module.exports =  new Class({
 
 	create: function() {
 
-		this.set_short('lab rat');
+        this.stats.strength = 20
+        this.stats.hp = 50
+        this.stats.dexterity = 10
+        this.stats.armor = 10
+        this.stats.speed = 3
+
+		this.set_short('guardian');
 
 		this.set_long(
-			"It looks as though this cute little guy's purpose is to test "+
-			"the room to make sure it's acceptable for living inhabitants. "+
-			"Judging by the fact that it's sniffing the air curiously, "+
-			"everything looks like it's working just fine."
+			"A large bullbeast with menacing horns, smoke streams from its "+
+			"ears . . ."
 		);
-
-		this.add_alias('rat');
-		this.stats.strength = 50;
-		this.stats.hp =500;
-		this.stats.speed= 15;
-		
-
-		this.load_chat(4, [
-			"emote squeaks quietly.",
-			"emote chews on a tiny piece of wood."
-    ]);
-  },
-  on_beatHeart: function(){
     
-        
+
+
+		this.add_alias('minotaur');
+
+	},
+    
+    
+    on_beatHeart: function(){
+    
         var players = this.getRoom().getPlayers();
         var unluckyPlayer = players.keys.getRandom();
         
         
         
         this.startCombat(players[unluckyPlayer]);
-		
-	},
+    
+    },
 
 	on_get: function(item, source) {
 
-		if (item.matches('strawberry')) {
-			this.emit("%You squeak%s happily.");
+		if (item.matches('swag')) {
+			this.emit("%You snort%s happily.");
 			this.emit("%You quickly scarf%s down "+item.get('short')+".");
 			this.emit("%You look%s at %Name expectantly.", source);
+            this.stats.strength = 0
+
 			return;
 		}
 

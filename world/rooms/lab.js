@@ -12,7 +12,7 @@ module.exports =  new Class({
 		//this.add_living('black cat');
 
 
-		this.load_item('test tube');
+		//this.load_item('test tube');
 		this.add_exit('east', 'testroom');
     
 	}
