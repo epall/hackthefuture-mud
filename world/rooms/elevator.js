@@ -32,7 +32,7 @@ module.exports =  new Class({
 		this.add_exit('south', 'lobby');
 	},
 	
-	do_press: function (world, str) {
+	do_press: function (user, str) {
     str = str.toLowerCase();
     if (str == "stop") {
       this.emit("Nothing happens.");
@@ -48,4 +48,8 @@ module.exports =  new Class({
       this.emit("You press the "+str+" button. The lights flicker, but the elevator doesn't move.");
     }
 	},
+
+  set_cable_plugged_in: function (newValue) {
+    this.cable_plugged_in = newValue;
+  }
 });
