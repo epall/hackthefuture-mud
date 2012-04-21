@@ -30,7 +30,7 @@ module.exports =  new Class({
 		);
 		this.add_command('press', '*');
 		this.add_exit('south', 'lobby');
-        this.add_exit('sideways', 'closet');
+        this.add_exit('trapdoor', 'Labrinthia_a');
 
 	},
 	
@@ -47,7 +47,7 @@ module.exports =  new Class({
     } else if (parseInt(str) < 1 || parseInt(str) > 14) {
       this.emit("The numbers only go from 1 to 14.");
     } else {
-      this.emit("You press the "+str+" button. The lights flicker, but the elevator does move.");
+      this.emit("You press the "+str+" button. The lights flicker, but the elevator doesn't move.");
     }
 	},
 

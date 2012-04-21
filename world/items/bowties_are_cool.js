@@ -1,5 +1,6 @@
 /**
  * Randomly generates a disco-themed item on creation.
+ yes!
  */
 module.exports =  new Class({
 

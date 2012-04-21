@@ -11,8 +11,10 @@ module.exports =  new Class({
       "The creature looks up at you with hateful eyes."
     );
 
-		this.add_exit('east', 'lobby');
-		//this.add_living('strawberry of doom');
+		this.add_exit('down', 'lobby');
+		this.add_living('strawberry_of_doom');
+		this.add_living('debug');
+		this.add_living('rat');
     this.add_command('plug', '*');
 	},
 

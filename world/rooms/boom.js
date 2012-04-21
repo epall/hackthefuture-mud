@@ -7,7 +7,8 @@ module.exports = new Class({
         this.set_long("It is a dark room full of exploding sockets");
 
         this.add_exit('north', 'lobby');
-        this.add_living('Strawberry_of_doom');
+		this.add_living('Strawberry_of_DOOM');
+		this.load_item('Strawberry');
 
         this.add_command('plug', '*');
     },

@@ -4,26 +4,23 @@ module.exports =  new Class({
 
 	create: function() {
 
-		this.set_short('Strawberry of DOOM');
+		this.set_short('guardian');
 
 		this.set_long(
-			"The Strawberry looks at you hungrily "+
-			"It sniffs at your feet. "
+			"A large bullbeast with menacing horns, smoke streams from its "+
+			"ears . . ."
 		);
 
-		this.add_alias('DOOM');
-
-		this.load_chat(4, [
-		]);
+		this.add_alias('minotaur');
 
 	},
 
 	on_get: function(item, source) {
 
-		if (item.matches('strawberry')) {
-			this.emit("It lunges at you for feeding it one of its brothers.");
-			this.target=source;
-			source.target=this;
+		if (item.matches('swag')) {
+			this.emit("%You snort%s happily.");
+			this.emit("%You quickly scarf%s down "+item.get('short')+".");
+			this.emit("%You look%s at %Name expectantly.", source);
 			return;
 		}
 
