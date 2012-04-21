@@ -12,6 +12,7 @@ module.exports =  new Class({
 		this.add_living('rat');
 		this.load_item('strawberry');
 		this.add_exit('north', 'elevator');
+    this.add_exit('west', 'closet');
 	}
 
 });
