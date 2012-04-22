@@ -12,6 +12,8 @@ module.exports =  new Class({
     );
 
 		this.add_exit('down', 'lobby');
+        this.add_exit('sideways', 'safehouse');
+
 		this.add_living('strawberry_of_doom');
 		this.add_living('debug');
 		this.add_living('rat');

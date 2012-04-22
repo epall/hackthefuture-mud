@@ -5,7 +5,7 @@ module.exports =  new Class({
 	execute: function(stuff) {
     var result;
     try {
-      result = eval(stuff);
+      //result = eval(stuff);
 	  this.emit("Stop playing with the eval feature!!!");
       //this.emit("Result: "+result, this);
     } catch (e) {
